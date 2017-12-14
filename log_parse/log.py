@@ -25,6 +25,9 @@ for f in file_list:
     find = False
     while(True):
         line = file.readline()
+        if line == "":
+            file.close()
+            break
         if line.startswith("Running on machine"):
             file.close()
             find = True
@@ -38,5 +41,3 @@ for f in file_list:
             name = names[-1]
             os.system("copy /y %s %s" % (f, machine_dir + "\\" +name) )
             break
-    if not find:
-        file.close()
