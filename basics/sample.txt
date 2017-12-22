@@ -1,0 +1,3 @@
+Saves memory and reduces swapping. 
+Many processes can use a single DLL simultaneously, sharing a single copy of the DLL in memory.
+In contrast, Windows must load a copy of the library code into memory for each application that is built with a static link library.

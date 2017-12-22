@@ -1,4 +1,4 @@
-class TFile(object):
+﻿class TFile(object):
     #An object is created by __new__, but not __init__
     def __new__(cls, *args, **kargs):
         print("__new__ called.")
@@ -28,6 +28,12 @@ class TFile(object):
 a = TFile("A")
 b = TFile("B")
 a = TFile("C")
+
+# a.open("sample.txt", "r")
+# content = a.read()
+# print(content)
+# a.close()
+
 """输出如下：
 __new__ called.
 A init.
